@@ -333,9 +333,9 @@ if test "${geosok}" = no; then
     AC_MSG_RESULT(no)
     cat errors.txt
     AC_MSG_NOTICE([Install failure: compilation and/or linkage problems.])
-    AC_MSG_ERROR([initGEOS_r not found in libgeos_c.])
+    AC_MSG_ERROR([GEOS_init_r not found in libgeos_c.])
   else
-    #AC_SUBST([GEOS_LIBS], ["${GEOS_DEP_CLIBS}"])
+    AC_SUBST([GEOS_LIBS], ["${GEOS_DEP_CLIBS}"])
     AC_MSG_RESULT(yes)
   fi
 fi
@@ -365,7 +365,7 @@ LIBLWGEOM=
 	     AC_MSG_ERROR([libproj not found a standard locations.]))
       AC_CHECK_LIB(geos_c, GEOS_init_r,
          AC_SUBST([PKG_LIBS], ["${PKG_LIBS} -lgeos_c"]), 
-	     AC_MSG_ERROR([libgeos not found a standard locations.]))
+         AC_SUBST([PKG_LIBS], ["${PKG_LIBS} ${PROJ_LIBS} ${GEOS_LIBS}"]))
       AC_SUBST([OBJECTS], ["${OBJECTS} \$(OBJECTS_LIBLWGEOM)"])
       AC_SUBST([PKG_CPPFLAGS], ["${PKG_CPPFLAGS} -I./liblwgeom"])
 	 ],

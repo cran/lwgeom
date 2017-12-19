@@ -1,4 +1,4 @@
-eceb7041b7604673f93bebd6ee70dd29 *DESCRIPTION
+256c4828284fee813592e0e2c2661fa2 *DESCRIPTION
 99e56cdeb32dff564d8a56a980e739ce *NAMESPACE
 ac928b15f66a42900457d55fc5a38d1a *R/RcppExports.R
 b52ed4a7f7b02431bbe89b9ab0d27fe6 *R/bearing.R
@@ -12,8 +12,8 @@ b4809a01b29c750f7cee6b335b5c44da *R/init.R
 911d4da2251a1abb14706993801647b7 *R/twkb.R
 a9e34ab9a607bad717921a6f1b55318d *R/valid.R
 52db8c7ed210aa6dca5d341890c48b24 *cleanup
-585abcf8e219b010916e39674ab439b7 *configure
-a0b8077669f5f5e80a5623d42ee210a8 *configure.ac
+f4e67be1760cc03cccf6307249945bd6 *configure
+194f146ca2f7e33dd0b09df1848da492 *configure.ac
 58aecbd7c50ef5305813f300d598bae9 *inst/COPYRIGHTS
 a7dbfb5d2e427de80b81d650f46df1d0 *man/bounding_circle.Rd
 a986396855112654d65b0e220447a44a *man/lw_geodetic.Rd
