@@ -69,8 +69,8 @@ BEGIN_RCPP
 END_RCPP
 }
 // CPL_geodetic_distance
-Rcpp::NumericMatrix CPL_geodetic_distance(Rcpp::List sfc1, Rcpp::List sfc2, double semi_major, double inv_flattening, double tolerance);
-RcppExport SEXP _lwgeom_CPL_geodetic_distance(SEXP sfc1SEXP, SEXP sfc2SEXP, SEXP semi_majorSEXP, SEXP inv_flatteningSEXP, SEXP toleranceSEXP) {
+Rcpp::List CPL_geodetic_distance(Rcpp::List sfc1, Rcpp::List sfc2, double semi_major, double inv_flattening, double tolerance, bool sparse, double semi_minor);
+RcppExport SEXP _lwgeom_CPL_geodetic_distance(SEXP sfc1SEXP, SEXP sfc2SEXP, SEXP semi_majorSEXP, SEXP inv_flatteningSEXP, SEXP toleranceSEXP, SEXP sparseSEXP, SEXP semi_minorSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -79,7 +79,9 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< double >::type semi_major(semi_majorSEXP);
     Rcpp::traits::input_parameter< double >::type inv_flattening(inv_flatteningSEXP);
     Rcpp::traits::input_parameter< double >::type tolerance(toleranceSEXP);
-    rcpp_result_gen = Rcpp::wrap(CPL_geodetic_distance(sfc1, sfc2, semi_major, inv_flattening, tolerance));
+    Rcpp::traits::input_parameter< bool >::type sparse(sparseSEXP);
+    Rcpp::traits::input_parameter< double >::type semi_minor(semi_minorSEXP);
+    rcpp_result_gen = Rcpp::wrap(CPL_geodetic_distance(sfc1, sfc2, semi_major, inv_flattening, tolerance, sparse, semi_minor));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -197,6 +199,19 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// CPL_snap_to_grid
+Rcpp::List CPL_snap_to_grid(Rcpp::List sfc, Rcpp::NumericVector origin, Rcpp::NumericVector size);
+RcppExport SEXP _lwgeom_CPL_snap_to_grid(SEXP sfcSEXP, SEXP originSEXP, SEXP sizeSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rcpp::List >::type sfc(sfcSEXP);
+    Rcpp::traits::input_parameter< Rcpp::NumericVector >::type origin(originSEXP);
+    Rcpp::traits::input_parameter< Rcpp::NumericVector >::type size(sizeSEXP);
+    rcpp_result_gen = Rcpp::wrap(CPL_snap_to_grid(sfc, origin, size));
+    return rcpp_result_gen;
+END_RCPP
+}
 // CPL_proj_version
 std::string CPL_proj_version(bool b);
 RcppExport SEXP _lwgeom_CPL_proj_version(SEXP bSEXP) {
@@ -208,31 +223,6 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// CPL_read_wkb
-Rcpp::List CPL_read_wkb(Rcpp::List wkb_list, bool EWKB, bool spatialite);
-RcppExport SEXP _lwgeom_CPL_read_wkb(SEXP wkb_listSEXP, SEXP EWKBSEXP, SEXP spatialiteSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Rcpp::List >::type wkb_list(wkb_listSEXP);
-    Rcpp::traits::input_parameter< bool >::type EWKB(EWKBSEXP);
-    Rcpp::traits::input_parameter< bool >::type spatialite(spatialiteSEXP);
-    rcpp_result_gen = Rcpp::wrap(CPL_read_wkb(wkb_list, EWKB, spatialite));
-    return rcpp_result_gen;
-END_RCPP
-}
-// CPL_write_wkb
-Rcpp::List CPL_write_wkb(Rcpp::List sfc, bool EWKB);
-RcppExport SEXP _lwgeom_CPL_write_wkb(SEXP sfcSEXP, SEXP EWKBSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Rcpp::List >::type sfc(sfcSEXP);
-    Rcpp::traits::input_parameter< bool >::type EWKB(EWKBSEXP);
-    rcpp_result_gen = Rcpp::wrap(CPL_write_wkb(sfc, EWKB));
-    return rcpp_result_gen;
-END_RCPP
-}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_lwgeom_CPL_geodetic_area", (DL_FUNC) &_lwgeom_CPL_geodetic_area, 3},
@@ -240,7 +230,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_lwgeom_CPL_geodetic_azimuth", (DL_FUNC) &_lwgeom_CPL_geodetic_azimuth, 3},
     {"_lwgeom_CPL_geodetic_segmentize", (DL_FUNC) &_lwgeom_CPL_geodetic_segmentize, 2},
     {"_lwgeom_CPL_geodetic_covers", (DL_FUNC) &_lwgeom_CPL_geodetic_covers, 2},
-    {"_lwgeom_CPL_geodetic_distance", (DL_FUNC) &_lwgeom_CPL_geodetic_distance, 5},
+    {"_lwgeom_CPL_geodetic_distance", (DL_FUNC) &_lwgeom_CPL_geodetic_distance, 7},
     {"_lwgeom_CPL_geos_version", (DL_FUNC) &_lwgeom_CPL_geos_version, 1},
     {"_lwgeom_CPL_init_lwgeom", (DL_FUNC) &_lwgeom_CPL_init_lwgeom, 1},
     {"_lwgeom_CPL_lwgeom_version", (DL_FUNC) &_lwgeom_CPL_lwgeom_version, 1},
@@ -251,9 +241,8 @@ static const R_CallMethodDef CallEntries[] = {
     {"_lwgeom_CPL_lwgeom_transform", (DL_FUNC) &_lwgeom_CPL_lwgeom_transform, 2},
     {"_lwgeom_CPL_minimum_bounding_circle", (DL_FUNC) &_lwgeom_CPL_minimum_bounding_circle, 1},
     {"_lwgeom_CPL_subdivide", (DL_FUNC) &_lwgeom_CPL_subdivide, 2},
+    {"_lwgeom_CPL_snap_to_grid", (DL_FUNC) &_lwgeom_CPL_snap_to_grid, 3},
     {"_lwgeom_CPL_proj_version", (DL_FUNC) &_lwgeom_CPL_proj_version, 1},
-    {"_lwgeom_CPL_read_wkb", (DL_FUNC) &_lwgeom_CPL_read_wkb, 3},
-    {"_lwgeom_CPL_write_wkb", (DL_FUNC) &_lwgeom_CPL_write_wkb, 2},
     {NULL, NULL, 0}
 };
 

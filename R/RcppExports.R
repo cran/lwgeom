@@ -21,8 +21,8 @@ CPL_geodetic_covers <- function(sfc1, sfc2) {
     .Call('_lwgeom_CPL_geodetic_covers', PACKAGE = 'lwgeom', sfc1, sfc2)
 }
 
-CPL_geodetic_distance <- function(sfc1, sfc2, semi_major, inv_flattening, tolerance) {
-    .Call('_lwgeom_CPL_geodetic_distance', PACKAGE = 'lwgeom', sfc1, sfc2, semi_major, inv_flattening, tolerance)
+CPL_geodetic_distance <- function(sfc1, sfc2, semi_major, inv_flattening, tolerance, sparse, semi_minor = -1.0) {
+    .Call('_lwgeom_CPL_geodetic_distance', PACKAGE = 'lwgeom', sfc1, sfc2, semi_major, inv_flattening, tolerance, sparse, semi_minor)
 }
 
 CPL_geos_version <- function(b = FALSE) {
@@ -65,15 +65,11 @@ CPL_subdivide <- function(sfc, max_vertices = 256L) {
     .Call('_lwgeom_CPL_subdivide', PACKAGE = 'lwgeom', sfc, max_vertices)
 }
 
+CPL_snap_to_grid <- function(sfc, origin, size) {
+    .Call('_lwgeom_CPL_snap_to_grid', PACKAGE = 'lwgeom', sfc, origin, size)
+}
+
 CPL_proj_version <- function(b = FALSE) {
     .Call('_lwgeom_CPL_proj_version', PACKAGE = 'lwgeom', b)
-}
-
-CPL_read_wkb <- function(wkb_list, EWKB = FALSE, spatialite = FALSE) {
-    .Call('_lwgeom_CPL_read_wkb', PACKAGE = 'lwgeom', wkb_list, EWKB, spatialite)
-}
-
-CPL_write_wkb <- function(sfc, EWKB = FALSE) {
-    .Call('_lwgeom_CPL_write_wkb', PACKAGE = 'lwgeom', sfc, EWKB)
 }
 

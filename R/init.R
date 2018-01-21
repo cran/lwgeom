@@ -1,15 +1,21 @@
 #' @importFrom Rcpp evalCpp
 #' @import sf
-#' @importFrom units set_units make_unit
+#' @importFrom units set_units as_units
 #' @useDynLib lwgeom
 NULL
 
 .onAttach = function(libname, pkgname) {
-	m = paste0("Linking to liblwgeom ", CPL_lwgeom_version(), 
-		", GEOS ", CPL_geos_version(),
-		", proj.4 ", CPL_proj_version())
+	esv = lwgeom_extSoftVersion()
+	m = paste0("Linking to liblwgeom ", esv["lwgeom"],
+		", GEOS ", esv["GEOS"],
+		", proj.4 ", esv["proj.4"])
 	CPL_init_lwgeom(NA_character_)
 	packageStartupMessage(m)
+	sf = sf_extSoftVersion()
+	if (sf["GEOS"] != esv["GEOS"])
+		warning(paste("GEOS versions differ: lwgeom has", esv["GEOS"], "sf has", sf["GEOS"]))
+	if (sf["proj.4"] != esv["proj.4"])
+		warning(paste("proj.4 versions differ: lwgeom has", esv["proj.4"], "sf has", sf["proj.4"]))
 }
 
 #' Provide the external dependencies versions of the libraries linked to sf
@@ -21,6 +27,7 @@ lwgeom_extSoftVersion = function() {
 		names = c("lwgeom", "GEOS", "proj.4"))
 }
 
+# redo:
 crs_parameters = function(x) {
 	if (utils::packageVersion("sf") > "0.5-5")
 		st_crs(x, parameters = TRUE)
