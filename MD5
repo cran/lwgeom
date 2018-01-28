@@ -1,4 +1,4 @@
-fd0b81f1d5f6b931c07a0dfe5f838c87 *DESCRIPTION
+ff9bd1b88ea8f6ae4c883f9bd14a547c *DESCRIPTION
 204d035c36a871442b894b19f789bb8b *NAMESPACE
 fa00efc719e057aa366a6e8735057b9f *NEWS.md
 3b707b2924514adc7e660a71834b7345 *R/RcppExports.R
@@ -138,7 +138,7 @@ bfdea24e3e22af7e21d9f185054528d6 *tests/dist.R
 22b7531f4c128d66e9337f47ed4c114a *tests/geod.Rout.save
 8fd45a4aebfb491127d6f52e33f1ed59 *tests/testthat.R
 b477b33b317651b2549f260efe2aabc7 *tests/testthat.Rout.save
-a51a36348429ba5965d22395a5524c98 *tests/testthat/test_lwgeom.R
+566eb9107388ce3d62b7ccc57c8e5b0c *tests/testthat/test_lwgeom.R
 1b0e74035b1e3f6fe65cd934b99f9fd7 *tests/twkb.R
 bf4c83bb296f5e66e4f62d05d7ebeae5 *tests/twkb.Rout.save
 b2590e55c350a84cd781f9878020ca6b *tools/winlibs.R
