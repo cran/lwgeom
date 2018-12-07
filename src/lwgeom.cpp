@@ -40,7 +40,7 @@ Rcpp::CharacterVector CPL_lwgeom_version(bool b = false) {
 // in
 std::vector<LWGEOM *> lwgeom_from_sfc(Rcpp::List sfc) {
 	std::vector<LWGEOM *> lwgeom_v(sfc.size()); // return
-	Rcpp::List wkblst = sf::CPL_write_wkb(sfc, true);
+	Rcpp::List wkblst = sf::CPL_write_wkb(sfc, true); // true: write EWKB, puts EPSG inside the wkb
 	for (int i = 0; i < wkblst.size(); i++) {
 		Rcpp::RawVector rv = wkblst[i];
 		const uint8_t *wkb = &(rv[0]); 
@@ -206,4 +206,72 @@ Rcpp::List CPL_snap_to_grid(Rcpp::List sfc, Rcpp::NumericVector origin, Rcpp::Nu
 	// return snapped geometries
 	return sfc_from_lwgeom(lwgeom_v); 
 #endif
+}
+
+// [[Rcpp::export]]
+Rcpp::NumericVector CPL_perimeter(Rcpp::List sfc, bool do2d = false) {
+	Rcpp::NumericVector out(sfc.length());
+	std::vector<LWGEOM *> lwgeom_v = lwgeom_from_sfc(sfc);
+
+	if (do2d) {
+		for (size_t i = 0; i < lwgeom_v.size(); i++)
+			out[i] = lwgeom_perimeter_2d(lwgeom_v[i]);
+	} else {
+		for (size_t i = 0; i < lwgeom_v.size(); i++)
+			out[i] = lwgeom_perimeter(lwgeom_v[i]);
+	}
+	return out;
+}
+
+
+// [[Rcpp::export]]
+Rcpp::LogicalVector CPL_is_polygon_cw(Rcpp::List sfc) {
+  std::vector<LWGEOM *> lwgeom_cw = lwgeom_from_sfc(sfc);
+  Rcpp::LogicalVector out(sfc.length());
+  for (size_t i = 0; i < lwgeom_cw.size(); i++) {
+    out[i] = lwgeom_is_clockwise(lwgeom_cw[i]);
+    lwgeom_free(lwgeom_cw[i]);
+  }
+  return out;
+}
+
+// [[Rcpp::export]]
+Rcpp::List CPL_force_polygon_cw(Rcpp::List sfc) {
+  
+  std::vector<LWGEOM *> lwgeom_cw = lwgeom_from_sfc(sfc);
+  for (size_t i = 0; i < lwgeom_cw.size(); i++) {
+    lwgeom_force_clockwise(lwgeom_cw[i]);
+  }
+  return sfc_from_lwgeom(lwgeom_cw);
+}
+
+// [[Rcpp::export]]
+Rcpp::NumericMatrix CPL_startpoint(Rcpp::List sfc) {
+  
+  std::vector<LWGEOM *> lwgeom_cw = lwgeom_from_sfc(sfc);
+  Rcpp::NumericMatrix m(lwgeom_cw.size(), 2);
+  
+  POINT4D p;
+  for (size_t i = 0; i < lwgeom_cw.size(); i++) {
+    lwgeom_startpoint(lwgeom_cw[i], &p);
+    m(i, 0) = p.x;
+    m(i, 1) = p.y;
+  }
+  
+  return m;
+  // next step: get it into sf form
+  // return sfc_from_lwgeom(lwgeom_cw);
+}
+
+// [[Rcpp::export]]
+Rcpp::CharacterVector CPL_sfc_to_wkt(Rcpp::List sfc, Rcpp::IntegerVector precision) {
+
+  std::vector<LWGEOM *> lwgeom_cw = lwgeom_from_sfc(sfc);
+  Rcpp::CharacterVector out;
+  for (size_t i = 0; i < lwgeom_cw.size(); i++) {
+	char *wkt = lwgeom_to_wkt(lwgeom_cw[i], WKT_EXTENDED, precision[0], NULL);
+    out.push_back(wkt);
+	free(wkt);
+  }
+  return out;
 }

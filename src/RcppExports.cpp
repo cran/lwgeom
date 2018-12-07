@@ -212,6 +212,63 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// CPL_perimeter
+Rcpp::NumericVector CPL_perimeter(Rcpp::List sfc, bool do2d);
+RcppExport SEXP _lwgeom_CPL_perimeter(SEXP sfcSEXP, SEXP do2dSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rcpp::List >::type sfc(sfcSEXP);
+    Rcpp::traits::input_parameter< bool >::type do2d(do2dSEXP);
+    rcpp_result_gen = Rcpp::wrap(CPL_perimeter(sfc, do2d));
+    return rcpp_result_gen;
+END_RCPP
+}
+// CPL_is_polygon_cw
+Rcpp::LogicalVector CPL_is_polygon_cw(Rcpp::List sfc);
+RcppExport SEXP _lwgeom_CPL_is_polygon_cw(SEXP sfcSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rcpp::List >::type sfc(sfcSEXP);
+    rcpp_result_gen = Rcpp::wrap(CPL_is_polygon_cw(sfc));
+    return rcpp_result_gen;
+END_RCPP
+}
+// CPL_force_polygon_cw
+Rcpp::List CPL_force_polygon_cw(Rcpp::List sfc);
+RcppExport SEXP _lwgeom_CPL_force_polygon_cw(SEXP sfcSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rcpp::List >::type sfc(sfcSEXP);
+    rcpp_result_gen = Rcpp::wrap(CPL_force_polygon_cw(sfc));
+    return rcpp_result_gen;
+END_RCPP
+}
+// CPL_startpoint
+Rcpp::NumericMatrix CPL_startpoint(Rcpp::List sfc);
+RcppExport SEXP _lwgeom_CPL_startpoint(SEXP sfcSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rcpp::List >::type sfc(sfcSEXP);
+    rcpp_result_gen = Rcpp::wrap(CPL_startpoint(sfc));
+    return rcpp_result_gen;
+END_RCPP
+}
+// CPL_sfc_to_wkt
+Rcpp::CharacterVector CPL_sfc_to_wkt(Rcpp::List sfc, Rcpp::IntegerVector precision);
+RcppExport SEXP _lwgeom_CPL_sfc_to_wkt(SEXP sfcSEXP, SEXP precisionSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rcpp::List >::type sfc(sfcSEXP);
+    Rcpp::traits::input_parameter< Rcpp::IntegerVector >::type precision(precisionSEXP);
+    rcpp_result_gen = Rcpp::wrap(CPL_sfc_to_wkt(sfc, precision));
+    return rcpp_result_gen;
+END_RCPP
+}
 // CPL_proj_version
 std::string CPL_proj_version(bool b);
 RcppExport SEXP _lwgeom_CPL_proj_version(SEXP bSEXP) {
@@ -220,6 +277,20 @@ BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< bool >::type b(bSEXP);
     rcpp_result_gen = Rcpp::wrap(CPL_proj_version(b));
+    return rcpp_result_gen;
+END_RCPP
+}
+// CPL_linesubstring
+Rcpp::List CPL_linesubstring(Rcpp::List sfc, double from, double to, double tolerance);
+RcppExport SEXP _lwgeom_CPL_linesubstring(SEXP sfcSEXP, SEXP fromSEXP, SEXP toSEXP, SEXP toleranceSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rcpp::List >::type sfc(sfcSEXP);
+    Rcpp::traits::input_parameter< double >::type from(fromSEXP);
+    Rcpp::traits::input_parameter< double >::type to(toSEXP);
+    Rcpp::traits::input_parameter< double >::type tolerance(toleranceSEXP);
+    rcpp_result_gen = Rcpp::wrap(CPL_linesubstring(sfc, from, to, tolerance));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -242,7 +313,13 @@ static const R_CallMethodDef CallEntries[] = {
     {"_lwgeom_CPL_minimum_bounding_circle", (DL_FUNC) &_lwgeom_CPL_minimum_bounding_circle, 1},
     {"_lwgeom_CPL_subdivide", (DL_FUNC) &_lwgeom_CPL_subdivide, 2},
     {"_lwgeom_CPL_snap_to_grid", (DL_FUNC) &_lwgeom_CPL_snap_to_grid, 3},
+    {"_lwgeom_CPL_perimeter", (DL_FUNC) &_lwgeom_CPL_perimeter, 2},
+    {"_lwgeom_CPL_is_polygon_cw", (DL_FUNC) &_lwgeom_CPL_is_polygon_cw, 1},
+    {"_lwgeom_CPL_force_polygon_cw", (DL_FUNC) &_lwgeom_CPL_force_polygon_cw, 1},
+    {"_lwgeom_CPL_startpoint", (DL_FUNC) &_lwgeom_CPL_startpoint, 1},
+    {"_lwgeom_CPL_sfc_to_wkt", (DL_FUNC) &_lwgeom_CPL_sfc_to_wkt, 2},
     {"_lwgeom_CPL_proj_version", (DL_FUNC) &_lwgeom_CPL_proj_version, 1},
+    {"_lwgeom_CPL_linesubstring", (DL_FUNC) &_lwgeom_CPL_linesubstring, 4},
     {NULL, NULL, 0}
 };
 

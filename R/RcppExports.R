@@ -69,7 +69,31 @@ CPL_snap_to_grid <- function(sfc, origin, size) {
     .Call('_lwgeom_CPL_snap_to_grid', PACKAGE = 'lwgeom', sfc, origin, size)
 }
 
+CPL_perimeter <- function(sfc, do2d = FALSE) {
+    .Call('_lwgeom_CPL_perimeter', PACKAGE = 'lwgeom', sfc, do2d)
+}
+
+CPL_is_polygon_cw <- function(sfc) {
+    .Call('_lwgeom_CPL_is_polygon_cw', PACKAGE = 'lwgeom', sfc)
+}
+
+CPL_force_polygon_cw <- function(sfc) {
+    .Call('_lwgeom_CPL_force_polygon_cw', PACKAGE = 'lwgeom', sfc)
+}
+
+CPL_startpoint <- function(sfc) {
+    .Call('_lwgeom_CPL_startpoint', PACKAGE = 'lwgeom', sfc)
+}
+
+CPL_sfc_to_wkt <- function(sfc, precision) {
+    .Call('_lwgeom_CPL_sfc_to_wkt', PACKAGE = 'lwgeom', sfc, precision)
+}
+
 CPL_proj_version <- function(b = FALSE) {
     .Call('_lwgeom_CPL_proj_version', PACKAGE = 'lwgeom', b)
+}
+
+CPL_linesubstring <- function(sfc, from, to, tolerance = 0.0) {
+    .Call('_lwgeom_CPL_linesubstring', PACKAGE = 'lwgeom', sfc, from, to, tolerance)
 }
 

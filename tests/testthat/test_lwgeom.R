@@ -55,7 +55,9 @@ test_that("st_snap_to_grid_works", {
 	x = st_read(system.file("gpkg/nc.gpkg", package="sf"), quiet = TRUE) %>%
 			st_transform(3395)
 	# snap to grid
-	y1 = st_snap_to_grid(x, 5000)
+	err <- try(y1 <- st_snap_to_grid(x, 5000), silent = TRUE)
+	if (inherits(err, "try-error")) # not available in liblwgeom < 2.5.0
+		skip("snap_to_grid not available in this liblwgeom version")
 	y2 = st_snap_to_grid(st_geometry(x), 5000)
 	y3 = st_snap_to_grid(st_geometry(x)[[1]], 5000)
 	# check that output class match inputs
@@ -89,4 +91,21 @@ test_that("st_transform_proj finds sf's PROJ files", {
   expect_false(any(bb1 == bb2))
   expect_true(all.equal(as.numeric(bb2), as.numeric(bb3)))
   expect_true(all.equal(as.numeric(bb4), as.numeric(bb3)))
+})
+
+test_that("st_linesubstring warns on 4326", {
+  library(sf)
+  lines = st_sfc(st_linestring(rbind(c(0,0), c(1,2), c(2,0))), crs = 4326)
+  library(lwgeom)
+  expect_warning(spl <- st_linesubstring(lines, 0.2, 0.8))
+  expect_silent(spl <- st_linesubstring(lines[[1]], 0.2, 0.8)) # sfg has no crs
+  expect_warning(spl <- st_linesubstring(st_sf(lines), 0.2, 0.8))
+  plot(st_geometry(lines), col = 'red', lwd = 3)
+  plot(spl, col = 'black', lwd = 3, add = TRUE)
+})
+
+test_that("st_startpoint works", {
+  library(sf)
+  library(lwgeom)
+  sp = st_startpoint(st_sfc(st_linestring(matrix(1:10,,2)), st_linestring(matrix(3:12,,2)),crs=4326))
 })
