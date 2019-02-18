@@ -1,5 +1,5 @@
 Package: lwgeom
-Version: 0.1-5
+Version: 0.1-6
 Title: Bindings to Selected 'liblwgeom' Functions for Simple Features
 Description: Access to selected functions found in 'liblwgeom' <https://github.com/postgis/postgis/tree/svn-trunk/liblwgeom>, the light-weight geometry library used by 'PostGIS' <http://postgis.net/>.
 Authors@R: c(person("Edzer", "Pebesma", role = c("aut", "cre"), email = "edzer.pebesma@uni-muenster.de", comment = c(ORCID = "0000-0001-8049-7069")),
@@ -18,13 +18,13 @@ BugReports: https://github.com/r-spatial/lwgeom/issues/
 Collate: init.R RcppExports.R geohash.R split.R subdivide.R valid.R
         transform.R bounding_circle.R bearing.R snap_to_grid.R
         startpoint.R twkb.R perimeter.R clockwise.R geod.R wkt.R
-RoxygenNote: 6.1.0
+RoxygenNote: 6.1.1
 NeedsCompilation: yes
-Packaged: 2018-12-05 19:57:20 UTC; edzer
+Packaged: 2019-02-18 16:32:42 UTC; edzer
 Author: Edzer Pebesma [aut, cre] (<https://orcid.org/0000-0001-8049-7069>),
   Colin Rundel [ctb],
   Andy Teucher [ctb],
   liblwgeom developers [cph]
 Maintainer: Edzer Pebesma <edzer.pebesma@uni-muenster.de>
 Repository: CRAN
-Date/Publication: 2018-12-07 09:40:03 UTC
+Date/Publication: 2019-02-18 17:10:06 UTC
