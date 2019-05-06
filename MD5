@@ -1,4 +1,4 @@
-eba2917a819d047f0c4762cdbaab8600 *DESCRIPTION
+8ab5fa195e42af96783807c5276bb1fe *DESCRIPTION
 28154fdd05c5f7c2689e963dec3b63bf *NAMESPACE
 621c51fcbbce59718e7e7696d81dcdef *NEWS.md
 9c4afd937b16cd6ccb14cd3c3ce226ab *R/RcppExports.R
@@ -10,7 +10,7 @@ df1ca2557a4c3a587772e671209b91b4 *R/bearing.R
 5457aaa4a4b54866d19abb845f2b6915 *R/init.R
 b2f66749cac540d6c40155306cb30476 *R/perimeter.R
 6d4377d348be86eee2c2bd4e25e44460 *R/snap_to_grid.R
-90a6d7a733376920582c19199b0c7f19 *R/split.R
+8e1e8aa93a8b9f3e1abcea775af804e5 *R/split.R
 0cd3914a53f8ae5a2b5a0da99d8911a1 *R/startpoint.R
 14ed66ee62d7b77ef46fa221f6ba4639 *R/subdivide.R
 e929994d34a0255601f910f4ef8d163c *R/transform.R
@@ -18,8 +18,8 @@ e929994d34a0255601f910f4ef8d163c *R/transform.R
 a9e34ab9a607bad717921a6f1b55318d *R/valid.R
 585d4d5467c14cf9e1ed2fe8a2bdd5a2 *R/wkt.R
 52db8c7ed210aa6dca5d341890c48b24 *cleanup
-f04a59106262862ddf5c636d8f8526ce *configure
-14114b7f64813e91a78f552a4342d554 *configure.ac
+fe84891c6d2f5b47af4f5dedfe5d399a *configure
+f6f0bc3fefe96d930fb4d46612249ee6 *configure.ac
 58aecbd7c50ef5305813f300d598bae9 *inst/COPYRIGHTS
 a7dbfb5d2e427de80b81d650f46df1d0 *man/bounding_circle.Rd
 76ca19584cf955025500a38115baa571 *man/geod.Rd
@@ -40,7 +40,7 @@ d97760746b591e99c1fbd65a39fca882 *man/st_subdivide.Rd
 fa7d8d90ac0a681fe3f222e45e1ce953 *man/valid.Rd
 6f9175b225390c0a8a4e9cd8fc3c2497 *src/DIFFS
 ee044216ac6f356999a2172b14328d12 *src/Makevars.in
-64a0601f628a729a43e72bc7773f4b05 *src/Makevars.win
+303560d385f5a1b9f4b4167e412e6ab0 *src/Makevars.win
 8c3627d65fcbf4690e58164d0aa8047e *src/README
 f2f542964dbd4d983419f68df8ee5335 *src/RcppExports.cpp
 e92cd9a388d5d99c08f8abb549d3b52f *src/geodetic.cpp
@@ -156,4 +156,4 @@ f648099fce151cf4ec25aebcae05ff9b *tests/testthat.Rout.save
 6673d7e1e5577057fb774080ee6125f2 *tests/testthat/test_lwgeom.R
 1b0e74035b1e3f6fe65cd934b99f9fd7 *tests/twkb.R
 bf4c83bb296f5e66e4f62d05d7ebeae5 *tests/twkb.Rout.save
-b2590e55c350a84cd781f9878020ca6b *tools/winlibs.R
+f77085ee6021864661940dcb3623b51e *tools/winlibs.R
