@@ -1,6 +1,6 @@
-7dd52e656de56ac76657b0d7f0cec274 *DESCRIPTION
-28154fdd05c5f7c2689e963dec3b63bf *NAMESPACE
-bf91cbbb06d564accbfb27d78f3d3d40 *NEWS.md
+4f5b6d4fcac557961e5fed15d037d9de *DESCRIPTION
+074cb8f3226657d5d419015f65cc425e *NAMESPACE
+a3c18f4d63684d91a1936d3f2b7eb4da *NEWS.md
 9c4afd937b16cd6ccb14cd3c3ce226ab *R/RcppExports.R
 df1ca2557a4c3a587772e671209b91b4 *R/bearing.R
 217897cfe81dee9673ea232801b3c184 *R/bounding_circle.R
@@ -18,8 +18,8 @@ b2f66749cac540d6c40155306cb30476 *R/perimeter.R
 e2ba99ebf47ddd400202b1f4e65db461 *R/valid.R
 917734c9a0e243270fc5aa6c36286b68 *R/wkt.R
 bb96e06885051ec7c078331506b5f2f1 *cleanup
-6dd42ca1a3685a220c1584e6dccf9861 *configure
-b36eef2fae36e347bd9ef2d8263a43ce *configure.ac
+0f0e775de6f5ccc996bc5d0c98169f13 *configure
+8669f2d8c85c130fa90b13a898dd1db7 *configure.ac
 58aecbd7c50ef5305813f300d598bae9 *inst/COPYRIGHTS
 a7dbfb5d2e427de80b81d650f46df1d0 *man/bounding_circle.Rd
 76ca19584cf955025500a38115baa571 *man/geod.Rd
@@ -37,7 +37,7 @@ e1596f9c5e7a65636f139c61458648d6 *man/st_split.Rd
 80abcf275b990697cdca0e68c739bbdd *man/st_startpoint.Rd
 d97760746b591e99c1fbd65a39fca882 *man/st_subdivide.Rd
 5cad3c8d25b2949ac2be18b2dfe0ca45 *man/st_transform_proj.Rd
-fa7d8d90ac0a681fe3f222e45e1ce953 *man/valid.Rd
+fc77d4f9056bd4540a677735bd079815 *man/valid.Rd
 6f9175b225390c0a8a4e9cd8fc3c2497 *src/DIFFS
 844b2fbe5b4cff354c81f7ec6b5da17f *src/Makevars.in
 a0198a63f6567e4d0427db918e1019c5 *src/Makevars.win
@@ -147,13 +147,13 @@ fe71afc62ef2bafa7efc891c0d1071a0 *src/liblwgeom/ptarray.c
 252be5c801d58d73281486290fb291f6 *src/liblwgeom/stringbuffer.h
 995cd9c6bac6e31459f4da7ba9dd82be *src/liblwgeom/varint.c
 09d38c8b48efb683b87dd1ee09d1ba49 *src/liblwgeom/varint.h
-e16b840a4cfe136393684d979ff67967 *src/lwgeom.cpp
+c6df766c393493b3682a10271e6fb011 *src/lwgeom.cpp
 a5bcf547205b549793cde6c1be6e8f12 *src/lwgeom.h
 48af59ae704ddde0508ccfa1a2059f74 *src/postgis_config.h
 f5a3e3a5e36fbcd323f5d03ed7ec6786 *src/postgis_config.h.in
 0f44cae228eef022e65dfa7544850b29 *src/postgis_config.win
 62bfb3f17903dbba24467b092b8e2f04 *src/postgis_svn_revision.h
-93b2dc41d458265ffd5285305774e0ac *src/proj.cpp
+a4fb5364f7224c93aa0f2f127681aa67 *src/proj.cpp
 bdc2019f2c6f101e52d2298f9f131eb4 *src/sub.cpp
 5ce641782adeccdaeff59d10ee5c6260 *tests/azimuth.R
 bd53da1ddc0b87da4a1bc944194a8e57 *tests/azimuth.Rout.save
