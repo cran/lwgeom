@@ -21,10 +21,17 @@ st_transform_proj = function(x, crs, ...) UseMethod("st_transform_proj")
 #' @name st_transform_proj
 #' @export
 st_transform_proj.sfc = function(x, crs, ...) {
-	stopifnot(is.character(crs))
-	stopifnot(length(crs) %in% c(1,2))
-	if (length(crs) == 1) # only output CRS
-		crs = c(st_crs(x)$proj4string, crs) # c(input, output)
+	if (inherits(crs, "crs"))
+		crs = if (sf_extSoftVersion()["proj.4"] >= "6.0.0")
+				crs$wkt
+			else
+				crs$proj4string
+	if (length(crs) == 1) # only target CRS given: get source crs
+		crs = if (sf_extSoftVersion()["proj.4"] >= "6.0.0")
+				c(st_crs(x)$wkt, crs) # c(input, output)
+			else
+				c(st_crs(x)$proj4string, crs) # c(input, output)
+	stopifnot(is.character(crs), length(crs) == 2)
 	ret = CPL_lwgeom_transform(x, crs)
 	ret = try(st_sfc(ret, crs = crs[2]))
 	if (inherits(ret, "try-error")) {
