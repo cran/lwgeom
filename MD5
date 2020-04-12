@@ -1,4 +1,4 @@
-1f7fe2d18335bbc939f6acb25636c750 *DESCRIPTION
+9b680e541b25096e30b31de92d0e4e80 *DESCRIPTION
 448d649ae0e1efd0c23ff09136048e47 *NAMESPACE
 60e11dce56e43d25d4bcfdc3929003d9 *NEWS.md
 9c4afd937b16cd6ccb14cd3c3ce226ab *R/RcppExports.R
@@ -18,8 +18,8 @@ b2f66749cac540d6c40155306cb30476 *R/perimeter.R
 9b19b4ebe53d8a5eddf697645bfdfab6 *R/valid.R
 917734c9a0e243270fc5aa6c36286b68 *R/wkt.R
 e217fdeb3f619171e0a751892bbf2145 *cleanup
-4f2b80d083c213193438e900ce42c9ad *configure
-f376d7c7bc23920554cf8ee6a5ac7310 *configure.ac
+7474f1782d7fc4ec7b3d0b35658db773 *configure
+596a1086355bbabad6bd74b4b6d7eba4 *configure.ac
 58aecbd7c50ef5305813f300d598bae9 *inst/COPYRIGHTS
 a7dbfb5d2e427de80b81d650f46df1d0 *man/bounding_circle.Rd
 76ca19584cf955025500a38115baa571 *man/geod.Rd
