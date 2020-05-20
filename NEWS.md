@@ -1,3 +1,19 @@
+# version 0.2-4
+
+* require sf >= 0.9-3, and use C API PROJ path setting (to work on CRAN windows binaries)
+
+* update to new GEOS (3.8.0) and PROJ (6.3.1) versions for CRAN windows binary builds
+
+* require GEOS 3.6.0 (required by PostGIS 3.0.0), and add check to configure
+
+# version 0.2-3
+
+* fix configure script to work with ubuntu/bionic and PROJ 4.9.3; #28
+
+# version 0.2-3
+
+* fix configure script to work with PROJ 5.x versions
+
 # version 0.2-2
 
 * adjust to sf >= 0.9-0 new crs representation
