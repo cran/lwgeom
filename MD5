@@ -1,4 +1,4 @@
-4d1692d04d427b557c1fc8f9c4a1bbd9 *DESCRIPTION
+50371f7ff118f779e56fbc80c08d15a2 *DESCRIPTION
 448d649ae0e1efd0c23ff09136048e47 *NAMESPACE
 406843c9d6b4843fde7c0e360d307d57 *NEWS.md
 8125fbf539aada9f7cfd0df99333ca0b *R/RcppExports.R
@@ -16,11 +16,10 @@ b2f66749cac540d6c40155306cb30476 *R/perimeter.R
 4e732a67a6053918908bf6ffbfd5492a *R/transform.R
 911d4da2251a1abb14706993801647b7 *R/twkb.R
 9b19b4ebe53d8a5eddf697645bfdfab6 *R/valid.R
-917734c9a0e243270fc5aa6c36286b68 *R/wkt.R
-3b306ebc46d8be1ca8446661692245c2 *TODO
+9a064fc15b1f5ffd34f2bf8524b7ce0c *R/wkt.R
 e217fdeb3f619171e0a751892bbf2145 *cleanup
-83d492a85c2ed4b1f26717481fae9379 *configure
-5e5b06fe1f6c64c8b63f3c2f11f17df7 *configure.ac
+67d5ca18a8e326cc589b814fff0ea7aa *configure
+bea368e4d5a98fa9281db6bfde874101 *configure.ac
 58aecbd7c50ef5305813f300d598bae9 *inst/COPYRIGHTS
 a7dbfb5d2e427de80b81d650f46df1d0 *man/bounding_circle.Rd
 36ba2aaeab3b50685e62e54f55b3a892 *man/geod.Rd
@@ -28,7 +27,7 @@ a7dbfb5d2e427de80b81d650f46df1d0 *man/bounding_circle.Rd
 5195299939c960b893cb7b47521991a2 *man/lwgeom_make_valid.Rd
 7fade9cafe93064bce4f6e406110bd2f *man/perimeter.Rd
 3dc282cb5ec2ab4f6510715ddae99f61 *man/st_as_sfc.TWKB.Rd
-cf83d1a3846e18d1aa8c4d3994f84ac8 *man/st_astext.Rd
+09f48d4fcb917909f56c5576f448a75a *man/st_astext.Rd
 64aced576d33ba913a62a750bc673e98 *man/st_force_polygon_cw.Rd
 5e398d27769649b35439876b88c62876 *man/st_geod_azimuth.Rd
 9eb0a0af04746dd4a318a8a87236a4b3 *man/st_geohash.Rd
@@ -41,15 +40,13 @@ d97760746b591e99c1fbd65a39fca882 *man/st_subdivide.Rd
 5cad3c8d25b2949ac2be18b2dfe0ca45 *man/st_transform_proj.Rd
 6f9175b225390c0a8a4e9cd8fc3c2497 *src/DIFFS
 844b2fbe5b4cff354c81f7ec6b5da17f *src/Makevars.in
-d27fc15c8b43ddd6aa9324622611b946 *src/Makevars.win
+fb9637272602fae6e99d9991903ffb6c *src/Makevars.win
 8c3627d65fcbf4690e58164d0aa8047e *src/README
 70e04b9d293597c6df04ed4b5fa0ec29 *src/RcppExports.cpp
 e92cd9a388d5d99c08f8abb549d3b52f *src/geodetic.cpp
 bc67cda97361b67573250f62c3d258df *src/geos.cpp
 abeb33ab3c689550cc1e884dc3f311fb *src/io.cpp
 981ea57326356b71912ee57c0af73f90 *src/liblwgeom/DIFFS
-e9d6f7e4aa28efc63569a81241bf8f34 *src/liblwgeom/README.topo
-c7fef396fbc51e42c884b507906de9c4 *src/liblwgeom/TODO
 155eaec9d0ba6b79cc3c7a55bcbc2b50 *src/liblwgeom/bytebuffer.c
 d838def5bb4928bb5fbcb24d4609d8c3 *src/liblwgeom/bytebuffer.h
 cc6df78ae63ace47ecb421c3c52acb54 *src/liblwgeom/effectivearea.c
@@ -57,13 +54,11 @@ cc6df78ae63ace47ecb421c3c52acb54 *src/liblwgeom/effectivearea.c
 31fd2327ab196e3dd8c65718f12f6ae8 *src/liblwgeom/gbox.c
 0d42e7689977cc1348c9d937bcc5cb55 *src/liblwgeom/gserialized.c
 cb13abf5cf0b4a57d752e650f0006c61 *src/liblwgeom/gserialized.h
-04c94baf619ed226cb618753c071e57e *src/liblwgeom/gserialized.txt
 44413c8b3e24afbc997fcf13970d6bd5 *src/liblwgeom/gserialized1.c
 4c5254742c13d9fbb388c8942e4803d1 *src/liblwgeom/gserialized1.h
 bdf40c320e486a638b95eac5a845f0d4 *src/liblwgeom/gserialized2.c
 8e90b7804fe2d46df9816be5f20e21cd *src/liblwgeom/gserialized2.h
 774f50a350921a733f363cedd288c11e *src/liblwgeom/liblwgeom.h
-bfb09fbb59438bff12018730c0df1179 *src/liblwgeom/liblwgeom.h.in
 589007bc71260fb133aede777239b5d9 *src/liblwgeom/liblwgeom_internal.h
 5ecf5d2e03dd5ba6308fc32909330df3 *src/liblwgeom/liblwgeom_topo.h
 a93c474ccda9c60e77d5ab238eff923b *src/liblwgeom/liblwgeom_topo_internal.h
@@ -100,10 +95,8 @@ a7e82c8e6c0c9330322b92e5a130ea11 *src/liblwgeom/lwin_encoded_polyline.c
 93e9bd1ac615cd42b0cc7453fe03877d *src/liblwgeom/lwin_wkt.c
 20e74ffc34f441646c570fa058aae492 *src/liblwgeom/lwin_wkt.h
 15f39e53c2c3aea330e3460c7c3a0b32 *src/liblwgeom/lwin_wkt_lex.c
-b424a9de4378678d73997bc738c8ea43 *src/liblwgeom/lwin_wkt_lex.l
 a33e2e3106decb5c7c209ded26215fea *src/liblwgeom/lwin_wkt_parse.c
 1197c34e06395441720ce62b5369927e *src/liblwgeom/lwin_wkt_parse.h
-1befa61e950f3188f0dae89c4c3f5f91 *src/liblwgeom/lwin_wkt_parse.y
 67669685ef528d7a2297a0b0e854bb64 *src/liblwgeom/lwinline.h
 02cfe3a3684bf4caa4670a83e1b6da9d *src/liblwgeom/lwiterator.c
 abacd4026eb9d57c971daa28d924557f *src/liblwgeom/lwkmeans.c
@@ -150,7 +143,7 @@ fe71afc62ef2bafa7efc891c0d1071a0 *src/liblwgeom/ptarray.c
 09d38c8b48efb683b87dd1ee09d1ba49 *src/liblwgeom/varint.h
 c6df766c393493b3682a10271e6fb011 *src/lwgeom.cpp
 a5bcf547205b549793cde6c1be6e8f12 *src/lwgeom.h
-264ad6810f17781928dbc2ff23e94c6d *src/postgis_config.h
+a9ca49f89176a42d34ca3bb4373693c9 *src/postgis_config.h
 f5a3e3a5e36fbcd323f5d03ed7ec6786 *src/postgis_config.h.in
 9b81947fbe464699b85cc9cae784e6af *src/postgis_config.win
 62bfb3f17903dbba24467b092b8e2f04 *src/postgis_svn_revision.h
@@ -170,5 +163,5 @@ ea1079926e5754effd134cd211bd9263 *tests/testthat/test-as_text.R
 43a596e15ba4e7ba3502cb97f4785776 *tests/testthat/test-clockwise.R
 1e7261ae9bee962bc897b908dc8e2b3f *tests/testthat/test_lwgeom.R
 1b0e74035b1e3f6fe65cd934b99f9fd7 *tests/twkb.R
-01ce3c1df8dc19221da12e423389d459 *tests/twkb.Rout.save
+784f7c3e5ae412ab5b132d6f26bf329a *tests/twkb.Rout.save
 fa54314ef0767263d67b30f06befcfb1 *tools/winlibs.R
