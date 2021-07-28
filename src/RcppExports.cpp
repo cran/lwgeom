@@ -5,6 +5,11 @@
 
 using namespace Rcpp;
 
+#ifdef RCPP_USE_GLOBAL_ROSTREAM
+Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
+Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
+#endif
+
 // CPL_geodetic_area
 Rcpp::NumericVector CPL_geodetic_area(Rcpp::List sfc, double semi_major, double inv_flattening);
 RcppExport SEXP _lwgeom_CPL_geodetic_area(SEXP sfcSEXP, SEXP semi_majorSEXP, SEXP inv_flatteningSEXP) {
@@ -149,6 +154,19 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< Rcpp::List >::type sfc(sfcSEXP);
     Rcpp::traits::input_parameter< Rcpp::List >::type blade(bladeSEXP);
     rcpp_result_gen = Rcpp::wrap(CPL_split(sfc, blade));
+    return rcpp_result_gen;
+END_RCPP
+}
+// CPL_wrap_x
+Rcpp::List CPL_wrap_x(Rcpp::List sfc, Rcpp::NumericVector wrap, Rcpp::NumericVector move);
+RcppExport SEXP _lwgeom_CPL_wrap_x(SEXP sfcSEXP, SEXP wrapSEXP, SEXP moveSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rcpp::List >::type sfc(sfcSEXP);
+    Rcpp::traits::input_parameter< Rcpp::NumericVector >::type wrap(wrapSEXP);
+    Rcpp::traits::input_parameter< Rcpp::NumericVector >::type move(moveSEXP);
+    rcpp_result_gen = Rcpp::wrap(CPL_wrap_x(sfc, wrap, move));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -341,6 +359,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_lwgeom_CPL_sfc_from_twkb", (DL_FUNC) &_lwgeom_CPL_sfc_from_twkb, 1},
     {"_lwgeom_CPL_make_valid", (DL_FUNC) &_lwgeom_CPL_make_valid, 1},
     {"_lwgeom_CPL_split", (DL_FUNC) &_lwgeom_CPL_split, 2},
+    {"_lwgeom_CPL_wrap_x", (DL_FUNC) &_lwgeom_CPL_wrap_x, 3},
     {"_lwgeom_CPL_geohash", (DL_FUNC) &_lwgeom_CPL_geohash, 2},
     {"_lwgeom_CPL_lwgeom_transform", (DL_FUNC) &_lwgeom_CPL_lwgeom_transform, 2},
     {"_lwgeom_CPL_minimum_bounding_circle", (DL_FUNC) &_lwgeom_CPL_minimum_bounding_circle, 1},
