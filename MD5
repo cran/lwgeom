@@ -1,6 +1,6 @@
-595fa49f1379858fed7c3b5f529462b1 *DESCRIPTION
+35fb2c5fce96642b2fe922d0c3e52665 *DESCRIPTION
 fd0e6f65230302c9fca3e79041608392 *NAMESPACE
-406843c9d6b4843fde7c0e360d307d57 *NEWS.md
+43d2135a20ef1b5009308eec5f558852 *NEWS.md
 c9d5e979f06c23fc39638373c8744e51 *R/RcppExports.R
 df1ca2557a4c3a587772e671209b91b4 *R/bearing.R
 217897cfe81dee9673ea232801b3c184 *R/bounding_circle.R
@@ -19,8 +19,8 @@ b2f66749cac540d6c40155306cb30476 *R/perimeter.R
 9a064fc15b1f5ffd34f2bf8524b7ce0c *R/wkt.R
 6495c01ca83bd1fbcf31c7776d62ef5c *R/wrap_x.R
 e217fdeb3f619171e0a751892bbf2145 *cleanup
-cdebac0ae7b59e835d50ec791a67d92e *configure
-71a90c72cdcfef5164196da8fa80f5c4 *configure.ac
+55704032ef394b3a2ab7a0da0873278e *configure
+ccf45c65a6b3cc80c86d0d4b07dbd798 *configure.ac
 58aecbd7c50ef5305813f300d598bae9 *inst/COPYRIGHTS
 a7dbfb5d2e427de80b81d650f46df1d0 *man/bounding_circle.Rd
 36ba2aaeab3b50685e62e54f55b3a892 *man/geod.Rd
@@ -97,7 +97,7 @@ a7e82c8e6c0c9330322b92e5a130ea11 *src/liblwgeom/lwin_encoded_polyline.c
 6e115d6f8b6fe3cac507b58d3f5ddf31 *src/liblwgeom/lwin_wkb.c
 93e9bd1ac615cd42b0cc7453fe03877d *src/liblwgeom/lwin_wkt.c
 20e74ffc34f441646c570fa058aae492 *src/liblwgeom/lwin_wkt.h
-15f39e53c2c3aea330e3460c7c3a0b32 *src/liblwgeom/lwin_wkt_lex.c
+6100ba9e0bb83f905dd8a3a628466990 *src/liblwgeom/lwin_wkt_lex.c
 a33e2e3106decb5c7c209ded26215fea *src/liblwgeom/lwin_wkt_parse.c
 1197c34e06395441720ce62b5369927e *src/liblwgeom/lwin_wkt_parse.h
 67669685ef528d7a2297a0b0e854bb64 *src/liblwgeom/lwinline.h
@@ -134,7 +134,7 @@ f58e1f7fb524b747e145e14c35277991 *src/liblwgeom/lwtin.c
 883caa0c99e5a13e1fb20326b8689a3e *src/liblwgeom/lwtriangle.c
 aec8b8402158bdf59e0fcff40364e981 *src/liblwgeom/lwunionfind.c
 586f44185eaaa83e02d154b7b12f7764 *src/liblwgeom/lwunionfind.h
-29d30e71d41cd664b7efdc4623e282ae *src/liblwgeom/lwutil.c
+db0a9b07390f1d854fe86826892de7e2 *src/liblwgeom/lwutil.c
 a23ef1572b23258b7ef63b2597fa6739 *src/liblwgeom/measures.c
 fea91c101e932800b38c3cea5b2b7bb6 *src/liblwgeom/measures.h
 79ed4c7b114de65b297051840b52819a *src/liblwgeom/measures3d.c
