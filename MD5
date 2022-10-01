@@ -1,6 +1,6 @@
-35fb2c5fce96642b2fe922d0c3e52665 *DESCRIPTION
+22682fa7070edf0d81b9a258dcabd7a4 *DESCRIPTION
 fd0e6f65230302c9fca3e79041608392 *NAMESPACE
-43d2135a20ef1b5009308eec5f558852 *NEWS.md
+c73852adc4ee5ea243a8a1671bf7a3f2 *NEWS.md
 c9d5e979f06c23fc39638373c8744e51 *R/RcppExports.R
 df1ca2557a4c3a587772e671209b91b4 *R/bearing.R
 217897cfe81dee9673ea232801b3c184 *R/bounding_circle.R
@@ -19,8 +19,8 @@ b2f66749cac540d6c40155306cb30476 *R/perimeter.R
 9a064fc15b1f5ffd34f2bf8524b7ce0c *R/wkt.R
 6495c01ca83bd1fbcf31c7776d62ef5c *R/wrap_x.R
 e217fdeb3f619171e0a751892bbf2145 *cleanup
-55704032ef394b3a2ab7a0da0873278e *configure
-ccf45c65a6b3cc80c86d0d4b07dbd798 *configure.ac
+801ea491952a92049d03a74169e6e607 *configure
+ba458e71c9d8fcfed1db285f6a74fc4a *configure.ac
 58aecbd7c50ef5305813f300d598bae9 *inst/COPYRIGHTS
 a7dbfb5d2e427de80b81d650f46df1d0 *man/bounding_circle.Rd
 36ba2aaeab3b50685e62e54f55b3a892 *man/geod.Rd
@@ -88,7 +88,7 @@ df0ca13d3c4e7e50042a6565b92dfcac *src/liblwgeom/lwgeom_geos.h
 e74701b2e828f19500dc8d04848b0d60 *src/liblwgeom/lwgeom_geos_split.c
 8521108448b4581b5f0d76c7c7eed2d5 *src/liblwgeom/lwgeom_log.h
 ef88b50f0e223320b6538684a3931693 *src/liblwgeom/lwgeom_median.c
-d14b38e6d0cc0b0e93c6e9b6341b24ed *src/liblwgeom/lwgeom_topo.c
+124b6d9404697b88e9d2d5d6a704b074 *src/liblwgeom/lwgeom_topo.c
 f90ba2426040c8d2cc853ab65bc7333a *src/liblwgeom/lwgeom_transform.c
 151b2f07e3fe2e3276b97b26fcc2d432 *src/liblwgeom/lwgeom_wrapx.c
 694637af8f4cf87f7581881bf0c08d29 *src/liblwgeom/lwhomogenize.c
@@ -146,7 +146,7 @@ fe71afc62ef2bafa7efc891c0d1071a0 *src/liblwgeom/ptarray.c
 09d38c8b48efb683b87dd1ee09d1ba49 *src/liblwgeom/varint.h
 850435ebccdf86b11760af3e2ef23309 *src/lwgeom.cpp
 a5bcf547205b549793cde6c1be6e8f12 *src/lwgeom.h
-a9ca49f89176a42d34ca3bb4373693c9 *src/postgis_config.h
+58e07dd3d3e322aeee57e31a771d9140 *src/postgis_config.h
 f5a3e3a5e36fbcd323f5d03ed7ec6786 *src/postgis_config.h.in
 9b81947fbe464699b85cc9cae784e6af *src/postgis_config.win
 62bfb3f17903dbba24467b092b8e2f04 *src/postgis_svn_revision.h
@@ -164,7 +164,7 @@ cd57b1b6cd6075754b428eca416ca142 *tests/perimeter.Rout.save
 b8ec18468ec83564c97954a556ee201c *tests/testthat.Rout.save
 ea1079926e5754effd134cd211bd9263 *tests/testthat/test-as_text.R
 43a596e15ba4e7ba3502cb97f4785776 *tests/testthat/test-clockwise.R
-46f0ee5e84700398d9ae5e3f016d7347 *tests/testthat/test_lwgeom.R
+d657e3852379da365666fb3c73fbc20f *tests/testthat/test_lwgeom.R
 1b0e74035b1e3f6fe65cd934b99f9fd7 *tests/twkb.R
 784f7c3e5ae412ab5b132d6f26bf329a *tests/twkb.Rout.save
 fa54314ef0767263d67b30f06befcfb1 *tools/winlibs.R
