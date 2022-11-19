@@ -1,6 +1,6 @@
-22682fa7070edf0d81b9a258dcabd7a4 *DESCRIPTION
+b9662408bb203d5e42aecc025e3726db *DESCRIPTION
 fd0e6f65230302c9fca3e79041608392 *NAMESPACE
-c73852adc4ee5ea243a8a1671bf7a3f2 *NEWS.md
+5facb39961988b941563ebef5182b730 *NEWS.md
 c9d5e979f06c23fc39638373c8744e51 *R/RcppExports.R
 df1ca2557a4c3a587772e671209b91b4 *R/bearing.R
 217897cfe81dee9673ea232801b3c184 *R/bounding_circle.R
@@ -19,8 +19,8 @@ b2f66749cac540d6c40155306cb30476 *R/perimeter.R
 9a064fc15b1f5ffd34f2bf8524b7ce0c *R/wkt.R
 6495c01ca83bd1fbcf31c7776d62ef5c *R/wrap_x.R
 e217fdeb3f619171e0a751892bbf2145 *cleanup
-801ea491952a92049d03a74169e6e607 *configure
-ba458e71c9d8fcfed1db285f6a74fc4a *configure.ac
+501febc7e815948f99f4752a8fb8dfa2 *configure
+1ab1c87041fc53d972d69cce911b233b *configure.ac
 58aecbd7c50ef5305813f300d598bae9 *inst/COPYRIGHTS
 a7dbfb5d2e427de80b81d650f46df1d0 *man/bounding_circle.Rd
 36ba2aaeab3b50685e62e54f55b3a892 *man/geod.Rd
@@ -61,13 +61,13 @@ cb13abf5cf0b4a57d752e650f0006c61 *src/liblwgeom/gserialized.h
 4c5254742c13d9fbb388c8942e4803d1 *src/liblwgeom/gserialized1.h
 bdf40c320e486a638b95eac5a845f0d4 *src/liblwgeom/gserialized2.c
 8e90b7804fe2d46df9816be5f20e21cd *src/liblwgeom/gserialized2.h
-774f50a350921a733f363cedd288c11e *src/liblwgeom/liblwgeom.h
+4d895d23ba57e76667a6bdfcb62fab91 *src/liblwgeom/liblwgeom.h
 589007bc71260fb133aede777239b5d9 *src/liblwgeom/liblwgeom_internal.h
 5ecf5d2e03dd5ba6308fc32909330df3 *src/liblwgeom/liblwgeom_topo.h
 a93c474ccda9c60e77d5ab238eff923b *src/liblwgeom/liblwgeom_topo_internal.h
 5a2bf8d95d912df4232e2ebe9a00452f *src/liblwgeom/lookup3.c
 5d298ac74cce6b14322cb435eaeee44f *src/liblwgeom/lwalgorithm.c
-d3ead7da488cb4be090bf79e4068c09e *src/liblwgeom/lwboundingcircle.c
+cf9d8184e0422bf5d0d262ede610c720 *src/liblwgeom/lwboundingcircle.c
 14e04da1b3c6f69eaa8af1844ac5c449 *src/liblwgeom/lwchaikins.c
 64e61747e0e98c1c6532227363842974 *src/liblwgeom/lwcircstring.c
 1b2e0b9968c1816d8eccd8eaa26466c4 *src/liblwgeom/lwcollection.c
@@ -78,9 +78,9 @@ d3ead7da488cb4be090bf79e4068c09e *src/liblwgeom/lwboundingcircle.c
 965fd0bd88b400086452a0651fea4527 *src/liblwgeom/lwgeodetic_tree.c
 16b6dcc310cd9642d8b96b1f5b268775 *src/liblwgeom/lwgeodetic_tree.h
 25f0d2bf912291821e07ba0e88a370fd *src/liblwgeom/lwgeom.c
-51f9640a47018c1bf550f344798d683a *src/liblwgeom/lwgeom_api.c
+87a0583770c3353fda5544b5e230cb9e *src/liblwgeom/lwgeom_api.c
 773e3002248425220d33f5653a41d27d *src/liblwgeom/lwgeom_debug.c
-1ef23f2805fd2fd697c0e15247f8a58e *src/liblwgeom/lwgeom_geos.c
+ffa9cc8edb7ae6cc36de11e0b51c4bc1 *src/liblwgeom/lwgeom_geos.c
 df0ca13d3c4e7e50042a6565b92dfcac *src/liblwgeom/lwgeom_geos.h
 4d397ed98e808db92e78ffc0ab4a42ad *src/liblwgeom/lwgeom_geos_clean.c
 6f05b2721c2b2d7de325b48fe8b8ce3e *src/liblwgeom/lwgeom_geos_cluster.c
@@ -97,7 +97,7 @@ a7e82c8e6c0c9330322b92e5a130ea11 *src/liblwgeom/lwin_encoded_polyline.c
 6e115d6f8b6fe3cac507b58d3f5ddf31 *src/liblwgeom/lwin_wkb.c
 93e9bd1ac615cd42b0cc7453fe03877d *src/liblwgeom/lwin_wkt.c
 20e74ffc34f441646c570fa058aae492 *src/liblwgeom/lwin_wkt.h
-6100ba9e0bb83f905dd8a3a628466990 *src/liblwgeom/lwin_wkt_lex.c
+a958dff69ac943078358c946e3d16cef *src/liblwgeom/lwin_wkt_lex.c
 a33e2e3106decb5c7c209ded26215fea *src/liblwgeom/lwin_wkt_parse.c
 1197c34e06395441720ce62b5369927e *src/liblwgeom/lwin_wkt_parse.h
 67669685ef528d7a2297a0b0e854bb64 *src/liblwgeom/lwinline.h
