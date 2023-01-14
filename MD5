@@ -1,4 +1,4 @@
-b9662408bb203d5e42aecc025e3726db *DESCRIPTION
+ef8bbf4c5d6315c621f05ab6f7dea3a7 *DESCRIPTION
 fd0e6f65230302c9fca3e79041608392 *NAMESPACE
 5facb39961988b941563ebef5182b730 *NEWS.md
 c9d5e979f06c23fc39638373c8744e51 *R/RcppExports.R
@@ -79,7 +79,7 @@ cf9d8184e0422bf5d0d262ede610c720 *src/liblwgeom/lwboundingcircle.c
 16b6dcc310cd9642d8b96b1f5b268775 *src/liblwgeom/lwgeodetic_tree.h
 25f0d2bf912291821e07ba0e88a370fd *src/liblwgeom/lwgeom.c
 87a0583770c3353fda5544b5e230cb9e *src/liblwgeom/lwgeom_api.c
-773e3002248425220d33f5653a41d27d *src/liblwgeom/lwgeom_debug.c
+7d5a37cb431ffc8c8b2d4fe5ba85a982 *src/liblwgeom/lwgeom_debug.c
 ffa9cc8edb7ae6cc36de11e0b51c4bc1 *src/liblwgeom/lwgeom_geos.c
 df0ca13d3c4e7e50042a6565b92dfcac *src/liblwgeom/lwgeom_geos.h
 4d397ed98e808db92e78ffc0ab4a42ad *src/liblwgeom/lwgeom_geos_clean.c
@@ -112,10 +112,10 @@ f4f4bd93540e67c50bb3d6c69c7d099e *src/liblwgeom/lwmpoly.c
 47f8b9f1228ca46db8f57d39546ed339 *src/liblwgeom/lwmsurface.c
 898ef643057a4359ff4b82e3b6efdda0 *src/liblwgeom/lwmval.c
 c7661ce52859a3f245ad35b42ba197d4 *src/liblwgeom/lwout_encoded_polyline.c
-1f2eb8ac8eef8bc0dd2f90cc81b61384 *src/liblwgeom/lwout_geojson.c
-25196dab9ed95a680ad37073296dddfa *src/liblwgeom/lwout_gml.c
+aa470eff2472b8ab93de34194eda20a1 *src/liblwgeom/lwout_geojson.c
+2e8a83cc7f1948f4e41535486e8d140e *src/liblwgeom/lwout_gml.c
 2d06fbce786ecf650d3d0e6038887c2a *src/liblwgeom/lwout_kml.c
-c4745a9854e92942f2fe1eeeff47bf68 *src/liblwgeom/lwout_svg.c
+0317510cd7e16b9396293fbdacfc31be *src/liblwgeom/lwout_svg.c
 01c06537a6d836f8e01e1db4e0a23884 *src/liblwgeom/lwout_twkb.c
 ddfe828c6d1ae3c3626e05cfbeca4a13 *src/liblwgeom/lwout_twkb.h
 d762325b916cbb51c7b2b5bb053981ca *src/liblwgeom/lwout_wkb.c
@@ -124,7 +124,7 @@ d762325b916cbb51c7b2b5bb053981ca *src/liblwgeom/lwout_wkb.c
 708f6fc5ce944d07742da97ef4c681de *src/liblwgeom/lwout_x3d.h
 731e6d42823ddf61287305651719a4f9 *src/liblwgeom/lwpoint.c
 0e93f65de4ad6ba33178dcc8c902d446 *src/liblwgeom/lwpoly.c
-a050e728d09809a2103bf3ec977c4a4a *src/liblwgeom/lwprint.c
+504175f776ba21506533711240f262f6 *src/liblwgeom/lwprint.c
 e0fc6e0a51a41633619be95fbf066177 *src/liblwgeom/lwpsurface.c
 dca4d980b703ff77bb191302d27af882 *src/liblwgeom/lwrandom.c
 a6db8bd40f93e1a97aef1dc02251553c *src/liblwgeom/lwrandom.h
@@ -146,7 +146,7 @@ fe71afc62ef2bafa7efc891c0d1071a0 *src/liblwgeom/ptarray.c
 09d38c8b48efb683b87dd1ee09d1ba49 *src/liblwgeom/varint.h
 850435ebccdf86b11760af3e2ef23309 *src/lwgeom.cpp
 a5bcf547205b549793cde6c1be6e8f12 *src/lwgeom.h
-58e07dd3d3e322aeee57e31a771d9140 *src/postgis_config.h
+3085f85a05b12cf24aeff5f8721997d6 *src/postgis_config.h
 f5a3e3a5e36fbcd323f5d03ed7ec6786 *src/postgis_config.h.in
 9b81947fbe464699b85cc9cae784e6af *src/postgis_config.win
 62bfb3f17903dbba24467b092b8e2f04 *src/postgis_svn_revision.h
