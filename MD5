@@ -1,6 +1,6 @@
-ef8bbf4c5d6315c621f05ab6f7dea3a7 *DESCRIPTION
+69893414e39a0017afab7effa976ded1 *DESCRIPTION
 fd0e6f65230302c9fca3e79041608392 *NAMESPACE
-5facb39961988b941563ebef5182b730 *NEWS.md
+2105125024071cf342f35ad566f0943f *NEWS.md
 c9d5e979f06c23fc39638373c8744e51 *R/RcppExports.R
 df1ca2557a4c3a587772e671209b91b4 *R/bearing.R
 217897cfe81dee9673ea232801b3c184 *R/bounding_circle.R
@@ -16,7 +16,7 @@ b2f66749cac540d6c40155306cb30476 *R/perimeter.R
 4e732a67a6053918908bf6ffbfd5492a *R/transform.R
 911d4da2251a1abb14706993801647b7 *R/twkb.R
 9b19b4ebe53d8a5eddf697645bfdfab6 *R/valid.R
-9a064fc15b1f5ffd34f2bf8524b7ce0c *R/wkt.R
+9587901a41fee148f8d73007a4f1fdb4 *R/wkt.R
 6495c01ca83bd1fbcf31c7776d62ef5c *R/wrap_x.R
 e217fdeb3f619171e0a751892bbf2145 *cleanup
 501febc7e815948f99f4752a8fb8dfa2 *configure
@@ -28,7 +28,7 @@ a7dbfb5d2e427de80b81d650f46df1d0 *man/bounding_circle.Rd
 5195299939c960b893cb7b47521991a2 *man/lwgeom_make_valid.Rd
 7fade9cafe93064bce4f6e406110bd2f *man/perimeter.Rd
 3dc282cb5ec2ab4f6510715ddae99f61 *man/st_as_sfc.TWKB.Rd
-09f48d4fcb917909f56c5576f448a75a *man/st_astext.Rd
+e9f05605b5c31bd9b0c4e26b5ea91f95 *man/st_astext.Rd
 64aced576d33ba913a62a750bc673e98 *man/st_force_polygon_cw.Rd
 5e398d27769649b35439876b88c62876 *man/st_geod_azimuth.Rd
 9eb0a0af04746dd4a318a8a87236a4b3 *man/st_geohash.Rd
@@ -41,9 +41,9 @@ d97760746b591e99c1fbd65a39fca882 *man/st_subdivide.Rd
 5cad3c8d25b2949ac2be18b2dfe0ca45 *man/st_transform_proj.Rd
 2beed75134b26f275e29e3be181d8ec3 *man/st_wrap_x.Rd
 6f9175b225390c0a8a4e9cd8fc3c2497 *src/DIFFS
-844b2fbe5b4cff354c81f7ec6b5da17f *src/Makevars.in
-2cec33791efd347cbcb051402d7cf9c4 *src/Makevars.ucrt
-dfafe19fb33316f5fb617f666343c6de *src/Makevars.win
+745c8fdbf211ff5eae9f5bcd182b3d75 *src/Makevars.in
+ce893d74ba270844c70dc3e9a4229c84 *src/Makevars.ucrt
+b5e6ec42436bd4d2ae55ee06d3a51d88 *src/Makevars.win
 8c3627d65fcbf4690e58164d0aa8047e *src/README
 bd15c9082014cfdf8f8f17aa693738af *src/RcppExports.cpp
 e92cd9a388d5d99c08f8abb549d3b52f *src/geodetic.cpp
