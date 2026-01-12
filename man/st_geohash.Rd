@@ -2,26 +2,48 @@
 % Please edit documentation in R/geohash.R
 \name{st_geohash}
 \alias{st_geohash}
+\alias{st_geom_from_geohash}
 \title{compute geohash from (average) coordinates}
 \usage{
 st_geohash(x, precision = 0)
+
+st_geom_from_geohash(
+  hash,
+  precision = -1,
+  crs = st_crs("OGC:CRS84"),
+  raw = FALSE
+)
 }
 \arguments{
 \item{x}{object of class \code{sf}, \code{sfc} or \code{sfg}}
 
 \item{precision}{integer; precision (length) of geohash returned. From the liblwgeom source: ``where the precision is non-positive, a precision based on the bounds of the feature. Big features have loose precision. Small features have tight precision.''}
+
+\item{hash}{character vector with geohashes}
+
+\item{crs}{object of class `crs`}
+
+\item{raw}{logical; if `TRUE`, return a matrix with bounding box coordinates on each row}
 }
 \value{
-character vector with geohashes
+`st_geohash` returns a character vector with geohashes; empty or full geometries result in `NA`
+
+`st_geom_from_geohash` returns a (bounding box) polygon for each geohash if `raw` is `FALSE`, if `raw` is `TRUE` a matrix is returned with bounding box coordinates on each row.
 }
 \description{
 compute geohash from (average) coordinates
 }
 \details{
-see \url{http://geohash.org/} or \url{https://en.wikipedia.org/wiki/Geohash}.
+see \url{https://en.wikipedia.org/wiki/Geohash}.
 }
 \examples{
 library(sf)
 lwgeom::st_geohash(st_sfc(st_point(c(1.5,3.5)), st_point(c(0,90))), 2)
 lwgeom::st_geohash(st_sfc(st_point(c(1.5,3.5)), st_point(c(0,90))), 10)
+st_geom_from_geohash(c('9qqj7nmxncgyy4d0dbxqz0', 'up'), raw = TRUE)
+o = options(digits = 20) # for printing purposes
+st_geom_from_geohash(c('9qqj7nmxncgyy4d0dbxqz0', 'u1hzz631zyd63zwsd7zt'))
+st_geom_from_geohash('9qqj7nmxncgyy4d0dbxqz0', 4) 
+st_geom_from_geohash('9qqj7nmxncgyy4d0dbxqz0', 10)
+options(o)
 }

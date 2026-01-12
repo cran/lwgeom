@@ -72,7 +72,7 @@ OBJECTS_LIBLWGEOM= \
   liblwgeom/lwcircstring.o \
   liblwgeom/lwin_wkt_parse.o
 
-PKG_CPPFLAGS = -I./liblwgeom -DUSE_PROJ_H
+PKG_CPPFLAGS = -I./liblwgeom -DUSE_PROJ_H -DHAVE_LIBLWGEOM_INTERNAL_H
 PKG_LIBS = -L./liblwgeom -llwgeomstatic
 
 ifeq (,$(shell pkg-config --version 2>/dev/null))
@@ -105,8 +105,6 @@ $(SHLIB): $(STATLIB)
 $(STATLIB): $(OBJECTS_LIBLWGEOM)
 
 $(OBJECTS_LIBLWGEOM): winlibs
-
-CXX_STD = CXX
 
 clean:
 	rm -f $(SHLIB) $(OBJECTS)

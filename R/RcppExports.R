@@ -9,8 +9,8 @@ CPL_geodetic_length <- function(sfc, semi_major, inv_flattening) {
     .Call('_lwgeom_CPL_geodetic_length', PACKAGE = 'lwgeom', sfc, semi_major, inv_flattening)
 }
 
-CPL_geodetic_azimuth <- function(sfc, semi_major, inv_flattening) {
-    .Call('_lwgeom_CPL_geodetic_azimuth', PACKAGE = 'lwgeom', sfc, semi_major, inv_flattening)
+CPL_geodetic_azimuth <- function(sfc, semi_major, inv_flattening, sfc2_ = NULL) {
+    .Call('_lwgeom_CPL_geodetic_azimuth', PACKAGE = 'lwgeom', sfc, semi_major, inv_flattening, sfc2_)
 }
 
 CPL_geodetic_segmentize <- function(sfc, max_seg_length) {
@@ -55,6 +55,10 @@ CPL_wrap_x <- function(sfc, wrap, move) {
 
 CPL_geohash <- function(sfc, prec) {
     .Call('_lwgeom_CPL_geohash', PACKAGE = 'lwgeom', sfc, prec)
+}
+
+CPL_bbox_from_geohash <- function(h, prec) {
+    .Call('_lwgeom_CPL_bbox_from_geohash', PACKAGE = 'lwgeom', h, prec)
 }
 
 CPL_lwgeom_transform <- function(sfc, p4s) {

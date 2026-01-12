@@ -3,12 +3,15 @@
 \name{bounding_circle}
 \alias{bounding_circle}
 \alias{st_minimum_bounding_circle}
+\alias{st_minimum_bounding_radius}
 \title{Generate the minimum bounding circle}
 \usage{
 st_minimum_bounding_circle(x, nQuadSegs = 30)
+
+st_minimum_bounding_radius(x)
 }
 \arguments{
-\item{x}{object of class \code{sfg}, \code{sfg} or \code{sf}}
+\item{x}{object of class \code{sfg}, \code{sfc} or \code{sf}}
 
 \item{nQuadSegs}{number of segments per quadrant (passed to \code{st_buffer})}
 }
@@ -19,7 +22,7 @@ Object of the same class as \code{x}
 Generate the minimum bounding circle
 }
 \details{
-\code{st_minimum_bounding_circle} uses the \code{lwgeom_calculate_mbc} method also used by the PostGIS command \code{ST_MinimumBoundingCircle}.
+\code{st_minimum_bounding_circle} uses the \code{lwgeom_calculate_mbc} method also used by the PostGIS command \code{ST_MinimumBoundingCircle}. \code{st_minimum_bounding_radius} also uses the \code{lwgeom_calculate_mbc} method, but returns the centers (as a geometry) and the respective radii (as a column).
 }
 \examples{
 library(sf)

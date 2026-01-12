@@ -7,7 +7,7 @@
 #' @param EWKT logical; use PostGIS Enhanced WKT (includes srid)
 #' @name st_astext
 #' @details The returned WKT representation of simple feature geometry conforms to the
-#' [simple features access](https://www.ogc.org/standard/sfa/) specification and extensions (if `EWKT = TRUE`),
+#' [simple features access](https://www.ogc.org/standards/sfa/) specification and extensions (if `EWKT = TRUE`),
 #' [known as EWKT](http://postgis.net/docs/using_postgis_dbmanagement.html#EWKB_EWKT), supported by
 #' PostGIS and other simple features implementations for addition of SRID to a WKT string.
 #' @md
@@ -17,7 +17,7 @@
 #' st_astext(pt, 3)
 #' st_asewkt(pt, 3)
 #' @export
-st_astext <- function(x, digits = options("digits"), ..., EWKT = FALSE) {
+st_astext <- function(x, digits = getOption("digits"), ..., EWKT = FALSE) {
   if (! EWKT && !inherits(x, "sfg"))
     st_crs(x) <- NA_crs_
   CPL_sfc_to_wkt(st_geometry(x), as.integer(digits))

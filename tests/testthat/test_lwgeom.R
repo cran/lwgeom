@@ -130,3 +130,51 @@ test_that("st_wrap_x works", {
   expect_equal(st_bbox(x)$xmin, splitline, check.attributes = FALSE)
   expect_equal(st_bbox(x)$xmax, splitline + offset, check.attributes = FALSE)
 })
+
+test_that("st_split works", {
+  library(lwgeom)
+  library(sf)
+  
+  l = st_as_sfc('MULTILINESTRING((10 10, 190 10, 190 190), (15 15, 30 30, 100 90))')
+  
+  pts = st_sfc(st_multipoint(matrix(c(30, 30,
+                                      190, 10),
+                                    ncol = 2,
+                                    byrow = TRUE)))
+  pts = st_cast(pts, "POINT")
+  pts_sf = st_sf(pts)
+  
+  splitted1 = st_split(l, pts)
+  splitted1 = st_collection_extract(splitted1, "LINESTRING")
+  
+  splitted2 = st_split(l, pts_sf)
+  splitted2 = st_collection_extract(splitted2, "LINESTRING")
+  
+  expect_equal(length(splitted1), 4)
+  expect_equal(splitted1, splitted2)
+})
+
+
+test_that('st_geod_azimuth works', {
+  library(lwgeom)
+  library(sf)
+  library(units)
+  
+  p = st_sfc(st_point(c(0,0)), st_point(c(0,0)), crs = 4326)
+  
+  p_x = st_sfc(st_point(c(0,0)), st_point(c(10,0)), crs = 4326)
+  
+  p_y = st_sfc(st_point(c(0,0)), st_point(c(0,10)), crs = 4326)
+  
+  expect_equal(st_geod_azimuth(p), as_units(NaN, 'rad'))
+  expect_equal(st_geod_azimuth(p_x), as_units(1.57, 'rad'), tolerance = 42)
+  expect_equal(st_geod_azimuth(p_y), as_units(0, 'rad'))
+  
+  # Check pairwise azimuth
+  expect_equal(nrow(st_geod_azimuth(p, y = p)), nrow(p))
+  
+  expect_equal(st_geod_azimuth(p, y = p), rep(as_units(NaN, 'rad'), 2))
+  expect_equal(st_geod_azimuth(p, y = p_x), as_units(c(NaN, 1.57), 'rad'), 
+               tolerance = 42)
+  expect_equal(st_geod_azimuth(p, y = p_y), as_units(c(NaN, 0), 'rad'))
+})

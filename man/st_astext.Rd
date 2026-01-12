@@ -5,7 +5,7 @@
 \alias{st_asewkt}
 \title{Return Well-known Text representation of simple feature geometry}
 \usage{
-st_astext(x, digits = options("digits"), ..., EWKT = FALSE)
+st_astext(x, digits = getOption("digits"), ..., EWKT = FALSE)
 
 st_asewkt(x, digits = options("digits"))
 }
@@ -23,7 +23,7 @@ Return Well-known Text representation of simple feature geometry or coordinate r
 }
 \details{
 The returned WKT representation of simple feature geometry conforms to the
-\href{https://www.ogc.org/standard/sfa/}{simple features access} specification and extensions (if \code{EWKT = TRUE}),
+\href{https://www.ogc.org/standards/sfa/}{simple features access} specification and extensions (if \code{EWKT = TRUE}),
 \href{http://postgis.net/docs/using_postgis_dbmanagement.html#EWKB_EWKT}{known as EWKT}, supported by
 PostGIS and other simple features implementations for addition of SRID to a WKT string.
 
