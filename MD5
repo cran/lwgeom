@@ -1,6 +1,6 @@
-ec1a4bc267976fc84bc2b5742c8e7038 *DESCRIPTION
+e909dfc08fb8279a10fc300d8acce90a *DESCRIPTION
 dd3839b233f0154c6877cbf02915e5d7 *NAMESPACE
-30dc473b43d54151ac94e6fba20342b1 *NEWS.md
+e69f56777749994172858b11d8140410 *NEWS.md
 45b1a6c230405c322255dd5f744756ff *R/RcppExports.R
 7b507dc15cb72756775820f2d741bdab *R/bearing.R
 11d9d029fd232c43f2885fea0b3f0ddc *R/bounding_circle.R
@@ -9,7 +9,7 @@ c2247a1bfa255d1246d1771ea06a3b39 *R/geod.R
 41bb22438986d58acd41d12d8298c176 *R/geohash.R
 a078fc6698e93ead1f9b5df8ac381446 *R/init.R
 d0628b424a5f0d8593c659d998546b78 *R/perimeter.R
-6d4377d348be86eee2c2bd4e25e44460 *R/snap_to_grid.R
+8ced77e5311308dd9ba45080db841d69 *R/snap_to_grid.R
 a2c1db30592b33c2afe1f9995ddecfc8 *R/split.R
 0cd3914a53f8ae5a2b5a0da99d8911a1 *R/startpoint.R
 14ed66ee62d7b77ef46fa221f6ba4639 *R/subdivide.R
@@ -35,7 +35,7 @@ ced076c21a97c55a361028d71d1dda31 *man/st_astext.Rd
 546b07148311cb3bc5db5740f07fbd61 *man/st_geohash.Rd
 98dbd2d3ced4f282641d8e07b8a63cd6 *man/st_is_polygon_cw.Rd
 4f3547929d58a06291555e60017a2203 *man/st_linesubstring.Rd
-b11adce7a9842477837efff4370767da *man/st_snap_to_grid.Rd
+b58e23b5e8ddc23bb3c922ac6f3a8608 *man/st_snap_to_grid.Rd
 33ca6084343b9554861a96868d8a4711 *man/st_split.Rd
 80abcf275b990697cdca0e68c739bbdd *man/st_startpoint.Rd
 d97760746b591e99c1fbd65a39fca882 *man/st_subdivide.Rd
@@ -145,7 +145,7 @@ fe71afc62ef2bafa7efc891c0d1071a0 *src/liblwgeom/ptarray.c
 252be5c801d58d73281486290fb291f6 *src/liblwgeom/stringbuffer.h
 995cd9c6bac6e31459f4da7ba9dd82be *src/liblwgeom/varint.c
 09d38c8b48efb683b87dd1ee09d1ba49 *src/liblwgeom/varint.h
-4a2dc9240ff8eeba100742befc95242c *src/lwgeom.cpp
+e3abbafea774c5eb38a5d55bd238f361 *src/lwgeom.cpp
 a5bcf547205b549793cde6c1be6e8f12 *src/lwgeom.h
 bd50fb7d18d2e81635a323d0cd7fab62 *src/postgis_config.h
 9c3081d9d5225ff87152f472468c1f80 *src/postgis_config.h.in

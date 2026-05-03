@@ -1,3 +1,9 @@
+# version 0.2-16
+
+* remove '%>%'; depend on R 4.1.0
+
+* `st_snap_to_grid()` handles empty geometries; #100
+
 # version 0.2-15
 
 * `st_geod_azimuth()` adds feature/pairwise azimuth #97 by @robitalec 
