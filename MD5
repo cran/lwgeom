@@ -1,4 +1,4 @@
-e909dfc08fb8279a10fc300d8acce90a *DESCRIPTION
+573a6307c34e3474994c9a42a86dc820 *DESCRIPTION
 dd3839b233f0154c6877cbf02915e5d7 *NAMESPACE
 e69f56777749994172858b11d8140410 *NEWS.md
 45b1a6c230405c322255dd5f744756ff *R/RcppExports.R
@@ -55,7 +55,7 @@ abeb33ab3c689550cc1e884dc3f311fb *src/io.cpp
 d838def5bb4928bb5fbcb24d4609d8c3 *src/liblwgeom/bytebuffer.h
 cc6df78ae63ace47ecb421c3c52acb54 *src/liblwgeom/effectivearea.c
 642a0c9c88cc329c3ae4a13c061a0354 *src/liblwgeom/effectivearea.h
-31fd2327ab196e3dd8c65718f12f6ae8 *src/liblwgeom/gbox.c
+6c2a6c98fb883f853f6c784bc4ab0097 *src/liblwgeom/gbox.c
 0d42e7689977cc1348c9d937bcc5cb55 *src/liblwgeom/gserialized.c
 cb13abf5cf0b4a57d752e650f0006c61 *src/liblwgeom/gserialized.h
 44413c8b3e24afbc997fcf13970d6bd5 *src/liblwgeom/gserialized1.c
